@@ -1,26 +1,60 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'neon';
+    src: url('./../assets//Sunset\ Club\ Free\ Trial.ttf');
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+    font-family: 'neon2';
+    src: url('./../assets/mexcellent\ 3d.otf');
 }
 
-* {
-  box-sizing: border-box;
+@font-face {
+    font-family: 'neon3';
+    src: url('./../assets/marquee\ moon.ttf');
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+@layer base {
+    html {
+        font-family: 'Lato', sans-serif;
+    }
+}
+
+@layer utilities {
+    .primary-color {
+        @apply text-pink-600;
+    }
+
+    .primary-text {
+        font-family: 'neon3';
+        color: #c724b1;
+        font-size: 1.8em;
+        text-shadow: 4px 4px 10px #4700d8;
+    }
+
+    .secondary-text {
+        @apply text-slate-700 text-base;
+    }
+
+    .custom-list-item {
+        @apply hover:text-[#c724b1] cursor-pointer transition-all text-base;
+    }
+
+    .sombra {
+        box-shadow: 0 0 15px #4700d8;
+    }
+
+    .text-shadow {
+        text-shadow: 0 2px 5px #4700d8;
+    }
+
+    .logo-text-2 {
+        font-family: 'neon3';
+        color: #5ee6eb;
+        font-size: 0.7em;
+        text-shadow: 4px 4px 10px #4d77ff;
+    }
 }
