@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import Container from '../Contianer';
 import SneakerItem from './SneakerItem';
 
 function SneakersList({ data }) {
     return (
-        <div className="grid grid-cols-4 gap-5">
-            {data.map(item => (
-                <SneakerItem key={item.name} {...item} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+            {data.map(sneaker => (
+                <SneakerItem key={sneaker.id} {...sneaker} />
             ))}
         </div>
     );

@@ -2,10 +2,11 @@ import React from 'react';
 
 function NavBar() {
     return (
-        <div className="secondary-text flex space-x-5">
-            <div className="custom-list-item hover:text-shadow">Inventario</div>
-            <div className="custom-list-item hover:text-shadow">Nuevos</div>
-        </div>
+        <nav className="h-full">
+            <ul className="flex flex-row space-x-5">
+                <li className="custom-list-item">Sign Up</li>
+            </ul>
+        </nav>
     );
 }
 

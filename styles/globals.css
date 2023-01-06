@@ -17,15 +17,56 @@
     src: url('./../assets/marquee\ moon.ttf');
 }
 
+@font-face {
+    font-family: 'candy';
+    src: url('./../assets/MajesticPersonalUseRegular-ZVP3B.ttf');
+}
+
+@font-face {
+    font-family: 'candy2';
+    src: url('./../assets/Candy\ Potato.otf');
+}
+
+@font-face {
+    font-family: 'candy3';
+    src: url('./../assets/Smile\ Candy.ttf');
+}
+
+@font-face {
+    font-family: 'Neonderthaw';
+    src: url('./../assets/Neonderthaw-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'open-sans';
+    src: url('./../assets/OpenSans-Regular.ttf');
+}
+
 @layer base {
+
+    :root{
+        --navigation-height: 54px:
+    }
+
     html {
-        font-family: 'Lato', sans-serif;
+        @apply bg-background font-['open-sans'] text-zinc-300;
     }
 }
+
+
 
 @layer utilities {
     .primary-color {
         @apply text-pink-600;
+    }
+
+    .custom-input {
+        @apply p-2 bg-zinc-700 rounded-md border-2 border-neutral-600 text-sm text-zinc-400
+         outline-none focus:border-neutral-500 transition-colors placeholder:text-zinc-500;
+    }
+
+    .custom-button {
+        @apply bg-gradient-to-r from-indigo-500 to-purple-500 h-10 rounded-md text-white text-xs flex-1 hover:shadow-[0_0_2px_2px_rgba(255,255,255,0.1)] transition-shadow flex items-center justify-center;
     }
 
     .primary-text {
@@ -36,12 +77,23 @@
             0 0 90px #4700d8, 0 0 100px #4700d8, 0 0 150px #4700d8;
     }
 
+    .buttonShadow {
+       /* -webkit-box-shadow: -10px 0px 13px -7px rgb(49 46 129 / 0.5), 10px 0px 13px -7px rgb(49 46 129 / 0.5), 5px 5px 15px 5px rgba(0,0,0,0); */
+        box-shadow: -10px 0px 40px -7px rgb(49 46 129 / 0.2), 10px 0px 40px -7px rgb(49 46 129 / 0.2), 1px 1px 22px -15px rgba(255,255,255,0.5);
+    }
+
+    .neonText {
+        font-size: 1.5em;
+        color: #d3d3dd;
+        font-weight: bold;
+    }
+
     .secondary-text {
         @apply text-slate-700 text-base;
     }
 
     .custom-list-item {
-        @apply hover:text-[#c724b1] cursor-pointer transition-all text-base;
+        @apply hover:text-zinc-400 cursor-pointer transition-colors duration-500;
     }
 
     .sombra {
@@ -53,10 +105,28 @@
     }
 
     .logo-text-2 {
-        font-family: 'neon3';
+        font-family: 'candy3';
         color: #5ee6eb;
         font-size: 0.7em;
         text-shadow: 0 0 4px #4d77ff, 0 0 11px #4d77ff, 0 0 19px #4d77ff, 0 0 40px #4d77ff, 0 0 80px #4d77ff,
             0 0 90px #4d77ff, 0 0 100px #4d77ff, 0 0 150px #4d77ff;
+    }
+
+    .bg-container {
+        @apply shadow-[inset_0_1px_2px_rgba(255,255,255,0.1)];
+    }
+
+    .container2 {
+        @apply bg-gradient-to-bl from-[#7900FF] to-[#0E185F];
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* For IE, Edge and Firefox */
+    .scrollbar-hide {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
     }
 }
